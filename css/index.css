@@ -1,0 +1,67 @@
+:root {
+    --bg1: #1e1e2f; --bg2: #2c2c3c;
+    --card: #2b2b3b; --accent: #ff7043;
+    --accent2: #2196F3; --text: #fff; --danger: #e53935;
+}
+body {
+    margin:0; padding:20px; background:linear-gradient(135deg,var(--bg1),var(--bg2));
+    font-family:'Segoe UI',sans-serif; color:var(--text);
+}
+h1 {
+    text-align:center; margin-bottom:15px; font-size:2em;
+}
+.casier-grid {
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+    gap:10px; margin-bottom:25px;
+}
+.casier-btn {
+    padding:15px; border:none; border-radius:15px;
+    font-size:1.3em; font-weight:bold;
+    background:var(--card); color:var(--text);
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    cursor:pointer; transition:0.15s;
+}
+.casier-btn:active { transform:scale(0.95); }
+.casier-btn.selected { background:var(--accent2); color:white; }
+.boissons {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+}
+.boisson-card {
+    background:var(--card);
+    border-radius:16px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 6px 10px rgba(0,0,0,0.5);
+}
+.boisson-card div:first-child {
+    font-size:1.2em;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+.boisson-card form {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+.add-btn, .remove-btn {
+    border:none; border-radius:12px;
+    padding:15px 20px; font-size:1.5em; font-weight:bold;
+    color:white; cursor:pointer;
+    transition:0.15s; touch-action:manipulation;
+}
+.add-btn { background:var(--accent2); }
+.remove-btn { background:var(--danger); }
+.add-btn:active, .remove-btn:active { transform:scale(0.9); }
+.counter {
+    font-size:1.3em;
+    font-weight:bold;
+    color:#fff;
+    background:rgba(255,255,255,0.1);
+    border-radius:10px;
+    padding:5px 10px;
+    display:inline-block;
+}
